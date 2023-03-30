@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <title>Odin Project - Library</title>
+</head>
+<body>
+    <div class="container">
+        <main>
+            <h3 id = "title">Odin Project - Library</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>Pages</th>
+                        <th>Read</th>
+                        <th>Mark Read</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            
+        </main>
+    </div>
+    <button class="add-book-button" onclick = 'openFormModal()'>Add Book</button>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeFormModal()">&times;</span>
+            <h3 class="form-title">New Book</h3>
+            <form>
+                <div class="field">
+                    <label for="title">Title</label>
+                    <input type="text" id="book-title" name="title">
+                </div>
+                <div class="field">
+                    <label for="author">Author</label>                        
+                    <input type="text" id="book-author" name="author">
+                </div>
+                <div class="field">
+                    <label for="pages">Pages</label>
+                    <input type="number" id="book-pages" name="pages">
+                </div>
+                <div class="field">
+                    <label for="read">Have you read the book?</label>
+                    <input type="checkbox" id="book-read" name="read">
+                </div>
+                <button id="form-submit-button" onclick="addBookToLibrary()">Add Book</button>
+            </form>
+        </div>
+    </div>
+    
+</body>
+</html>
